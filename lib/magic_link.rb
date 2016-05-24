@@ -1,0 +1,3 @@
+class MagicLink
+
+end
