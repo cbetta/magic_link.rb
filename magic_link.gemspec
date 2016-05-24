@@ -8,4 +8,6 @@ Gem::Specification.new do |s|
   s.files       = ["lib/magic_link.rb"]
   s.homepage    = 'https://github.com/cbetta/magic_link.rb'
   s.license     = 'MIT'
+
+  s.add_dependency "oauth2", ">= 1"
 end
