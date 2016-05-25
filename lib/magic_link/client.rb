@@ -2,9 +2,10 @@ require 'oauth2'
 
 class MagicLink
   class Client
-    def initialize key, secret, site = 'https://magiclink.io'
+    def initialize key, secret, options = {}
       @key = key
       @secret = secret
+      site = options[:site] || 'https://magiclink.io'
       @client = OAuth2::Client.new(key, secret, site: site)
     end
 
@@ -22,7 +23,7 @@ class MagicLink
     end
 
     def confirm access_token, confirmation_token
-      token.post("/api/v1/authentications/#{access_token}.json", params: {
+      token.put("/api/v1/authentications/#{access_token}.json", params: {
         authentication: {
           confirmation_token: confirmation_token
         }

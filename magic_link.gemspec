@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'magic_link'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.summary     = "Wrapper for the MagicLink API and a Rails engine"
   s.description = "Wrapper for the MagicLink API and a Rails engine"
   s.authors     = ["Cristiano Betta"]
